@@ -25,3 +25,5 @@ RUN chmod +x /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 CMD ["service","ss5","start"]
+
+CMD ["tail","-f","/dev/null"]
