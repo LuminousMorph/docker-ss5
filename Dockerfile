@@ -4,8 +4,12 @@ MAINTAINER 冰糕Luminous
 MAINTAINER luminous@ice-luminous.com
 MAINTAINER HeavenArk Ltd.
 
+ENV S5_USER default
+ENV S5_USER default
+
 RUN yum install -y make cmake gcc openldap-devel pam-devel openssl-devel nano sudo net-tools
 RUN mkdir -p /ss5/
+RUN touch /etc/sysconfig/network
 
 ADD ./source.tar.xz /
 
