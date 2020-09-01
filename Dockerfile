@@ -15,6 +15,8 @@ RUN /ss5t/configure
 RUN make -C /ss5t
 RUN make install -C /ss5t
 
+RUN chmod u+x /etc/rc.d/init.d/ss5
+
 EXPOSE 1080
 
 ENTRYPOINT ["docker-entrypoint.sh"]
