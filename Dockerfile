@@ -4,7 +4,7 @@ MAINTAINER 冰糕Luminous
 MAINTAINER luminous@ice-luminous.com
 MAINTAINER HeavenArk Ltd.
 
-RUN yum install make cmake gcc openldap-devel pam-devel openssl-devel nano sudo net-tools
+RUN yum install -y make cmake gcc openldap-devel pam-devel openssl-devel nano sudo net-tools
 RUN mkdir -p /ss5t/
 
 COPY ./ss5-3.8.9/* /ss5t/
