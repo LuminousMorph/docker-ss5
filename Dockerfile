@@ -5,15 +5,15 @@ MAINTAINER luminous@ice-luminous.com
 MAINTAINER HeavenArk Ltd.
 
 RUN yum install -y make cmake gcc openldap-devel pam-devel openssl-devel nano sudo net-tools
-RUN mkdir -p /ss5t/
+RUN mkdir -p /ss5/
 
-ADD ./source.tar.xz /ss5
+ADD ./source.tar.xz /ss5/
 COPY docker-entrypoint.sh /
 
-RUN chmod -R 777 /ss5t/
-RUN /ss5t/configure
-RUN make -C /ss5t
-RUN make install -C /ss5t
+RUN chmod -R 777 /ss5/
+RUN /ss5/configure
+RUN make -C /ss5
+RUN make install -C /ss5
 
 RUN chmod u+x /etc/rc.d/init.d/ss5
 
