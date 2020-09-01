@@ -7,7 +7,7 @@ MAINTAINER HeavenArk Ltd.
 RUN yum install -y make cmake gcc openldap-devel pam-devel openssl-devel nano sudo net-tools
 RUN mkdir -p /ss5t/
 
-COPY ./ss5-3.8.9/* /ss5t/
+ADD ./source.tar.xz /ss5
 COPY docker-entrypoint.sh /
 
 RUN chmod -R 777 /ss5t/
