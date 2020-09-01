@@ -3,11 +3,13 @@
 USER='default'
 PWD='default'
 
-if [ -z $S5_USER ]; then
+if [[ -z $S5_USER ]]; then
+else
   USER=$S5_USER
 fi
 
-if [ -z $S5_PASSWORD ]; then
+if [[ -z $S5_PASSWORD ]]; then
+else
   PWD=$S5_PASSWORD
 fi
 
