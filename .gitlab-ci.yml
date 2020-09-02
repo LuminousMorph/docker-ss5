@@ -1,0 +1,24 @@
+variables:
+  PROJECT_NAME: "Docker-SS5"
+  PROJECT_NAME_DOCKER: "docker-ss5"
+  VERSION: "1.0.0"
+
+stages:
+  - build
+
+job1:
+  stage: build
+  tags:
+    - maven
+    - harbor
+  only:
+    - master
+  script:
+    - echo "===============  开始打包内容[$PROJECT_NAME]  ==============="
+    - tar -Jcf ./source.tar.xz ./ss5/
+    - echo "===============  开始构建Docker镜像[$PROJECT_NAME]  ==============="
+    - docker build -t harbor.ice-luminous.com/heavenarks/$PROJECT_NAME_DOCKER:$VERSION .
+    - echo "===============  开始推送Docker镜像[$PROJECT_NAME]  ==============="
+    - docker push harbor.ice-luminous.com/heavenarks/$PROJECT_NAME_DOCKER:$VERSION
+    - echo "===============  开始删除临时Docker镜像[$PROJECT_NAME]  ==============="
+    - docker rmi harbor.ice-luminous.com/heavenarks/$PROJECT_NAME_DOCKER:$VERSION
