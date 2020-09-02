@@ -2,6 +2,8 @@
 
 *此镜像为SS5的Docker版本。采用SS5-3.8.9-8和7entos7封装，集成GPL协议*
 
+*项目镜像地址 https://harbor.ice-luminous.com/harbor/tags/3/heavenarks%2Fdocker-ss5*
+
 ## 简单启动
 
 ``` shell
