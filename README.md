@@ -2,6 +2,8 @@
 
 *此镜像为SS5的Docker版本。采用 SS5-3.8.9-8 和 Centos7 封装，集成GPL协议*
 
+*Github为项目镜像地址源地址为: https://gitlab.ice-luminous.com/heavenark/docker-socket5*
+
 *项目镜像地址 https://harbor.ice-luminous.com/harbor/tags/3/heavenarks%2Fdocker-ss5*
 
 ## 简单启动
