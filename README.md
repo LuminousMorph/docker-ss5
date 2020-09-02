@@ -1,6 +1,6 @@
 # Docker-SS5(SS5-Docker)
 
-*此镜像为SS5的Docker版本。采用SS5-3.8.9-8和7entos7封装，集成GPL协议*
+*此镜像为SS5的Docker版本。采用 SS5-3.8.9-8 和 Centos7 封装，集成GPL协议*
 
 *项目镜像地址 https://harbor.ice-luminous.com/harbor/tags/3/heavenarks%2Fdocker-ss5*
 
